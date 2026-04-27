@@ -1,0 +1,192 @@
+# outline.md
+
+Stage 3 of The Narrative Pivot workflow.
+Always load voice.md before running this skill.
+
+## Purpose
+
+To build a section-by-section outline from Neera's brain dump and 
+competitive findings. The outline is a working document, not a 
+final structure. Its job is to identify what the post needs to say, 
+in what order, and where the gaps are before any drafting begins.
+
+This stage does NOT produce any draft copy.
+It produces a structured outline with gaps explicitly flagged.
+
+## Input
+
+- Selected idea from Notion (validated through Perplexity → Gemini research)
+  - Working title
+  - Core thesis
+  - Symptom reader recognizes
+  - Competitive gap identified
+  - What reader walks away able to do
+  - Supporting evidence from research
+- Neera's brain dump, notes, or rough ideas for the post
+- Lived experience or real moment anchoring the post
+
+## What Claude Does at This Stage
+
+1. Read all inputs and identify the strongest structural spine 
+   for the post
+2. Map the brain dump content to the outline template below
+3. Flag every section where a real example, lived moment, or 
+   specific claim is missing
+4. Flag any section that risks repeating what benchmark creators 
+   have already covered
+5. Flag if the thesis thread is missing from any section
+6. Do NOT write any section copy -- only structural notes and 
+   gap flags
+
+## The Outline Structure
+
+Every Narrative Pivot post follows this structure.
+Sections can be renamed but the jobs they do cannot be skipped.
+
+---
+**POST METADATA**
+Pull from selected Notion idea:
+- Working title:
+- Core thesis (one sentence):
+- Target reader: (B2B SaaS founder or Sales/Product/Marketing leader)
+- Symptom reader recognizes:
+- What they walk away able to DO:
+- Competitive gap (differentiated angle):
+
+---
+**SECTION 1: HOOK**
+Job: Pull the reader in and establish Neera's perspective within 
+the first two paragraphs. The target reader should self-identify 
+before the end of this section.
+
+Checklist:
+- [ ] Does the hook signal who this is for within the first 
+      two paragraphs?
+- [ ] Is there a specific moment, observation, or scene -- 
+      not a generalization?
+- [ ] Does it establish why Neera is the person saying this 
+      without leading with credentials?
+
+Gap to flag: if the hook opens with a general statement and 
+takes more than two paragraphs to signal the target reader, 
+flag it and identify where the targeting signal should appear.
+
+---
+**SECTION 2: THE PATTERN**
+Job: Name what keeps coming up. Make the reader think 
+"that's exactly what I see / feel / experience."
+This section is a bridge, not an argument. Keep it short.
+
+Checklist:
+- [ ] Is the pattern named in one clear sentence?
+- [ ] Does it connect directly to the thesis?
+- [ ] Is it short enough to feel like a pivot rather than 
+      a separate argument?
+
+Gap to flag: if the pattern section becomes its own argument 
+rather than a setup for what follows, flag it.
+
+---
+**SECTION 3: THE MYTH OR DEFAULT BEHAVIOR**
+Job: Name what people do instead and why it doesn't work. 
+The reader should feel slightly called out -- not attacked, 
+but recognized.
+
+Checklist:
+- [ ] Is there a specific, concrete example -- not a hypothetical?
+- [ ] Does it name a behavior the target reader actually does?
+- [ ] Does it create tension without being preachy?
+
+Gap to flag: if this section makes a claim without a real 
+example to back it up, flag the missing example and describe 
+what kind of moment would fill it.
+
+---
+**SECTION 4: THE REFRAME**
+Job: Land the thesis. This is the inversion or counterintuitive 
+truth. The sentence people screenshot.
+
+Checklist:
+- [ ] Is the thesis stated plainly with no hedging?
+- [ ] Is it short enough to land as a standalone moment?
+- [ ] Does it feel like a natural consequence of Section 3?
+
+Gap to flag: if the reframe is buried inside a longer paragraph 
+or qualified with too many caveats, flag it.
+
+---
+**SECTION 5: THE ACTIONABLE FRAMEWORK**
+Job: Deliver on the promise made in the hook. Give the reader 
+something they can do immediately.
+
+Checklist:
+- [ ] Are there 2-3 specific, concrete steps or questions?
+- [ ] Does at least one step have a real example showing 
+      what the output looks like?
+- [ ] Is the advice specific to the target reader's situation -- 
+      not generic enough to apply to anyone?
+
+Gap to flag: if a step describes a process without showing 
+what the result looks like, flag the missing example. 
+Abstract advice without a concrete illustration stays abstract.
+
+---
+**SECTION 6: THE HONEST ENDING**
+Job: Acknowledge what this does NOT solve or what the reader 
+might discover that they don't want to. Build trust by not 
+overselling.
+
+Checklist:
+- [ ] Does the ending resist wrapping up too neatly?
+- [ ] Does it acknowledge discomfort, difficulty, or limitation?
+- [ ] Does it close any open thread from the hook?
+
+Gap to flag: if the ending feels like a tidy resolution rather 
+than an honest one, flag it. If the hook opened a narrative 
+thread that isn't closed, flag the missing closure.
+
+---
+**CLOSING**
+Job: Soft introduction to Neera and The Narrative Pivot. 
+One short paragraph. Not a bio. A reason to come back.
+
+Checklist:
+- [ ] Does it speak the reader's language rather than 
+      PMM insider language?
+- [ ] Does it explain what the newsletter is for without 
+      sounding like a pitch?
+- [ ] Does it end with a low-friction invitation?
+
+---
+
+## Thesis Thread Check
+
+After mapping the outline, run this check:
+
+For each section ask: does this section advance, illustrate, 
+or resolve the core thesis?
+
+If a section does none of those three things, flag it as 
+potentially unnecessary or misplaced.
+
+The thesis should be:
+- Set up in Section 1
+- Named in Section 2 or 3
+- Landed explicitly in Section 4
+- Proven in Section 5
+- Resolved honestly in Section 6
+
+If the thesis disappears in the middle sections, flag exactly 
+where it drops and suggest where to reintroduce it.
+
+## Output
+
+A completed section-by-section outline with:
+- A one-line description of what each section does
+- A list of gaps explicitly flagged with a description of 
+  what's missing and why it matters
+- A thesis thread assessment confirming the thesis runs 
+  through every section
+
+The outline is ready to hand back to Neera to draft from.
+Claude does not write the draft.

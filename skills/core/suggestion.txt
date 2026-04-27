@@ -1,0 +1,120 @@
+# suggestion.md
+
+Stage 7 of The Narrative Pivot workflow.
+Always load voice.md before running this skill.
+
+## Purpose
+
+To offer suggested rewrites for issues flagged in Stage 6.
+Every suggestion is shown as an option Neera can accept, 
+edit, or reject. Nothing is applied automatically.
+
+This stage does NOT make decisions.
+It offers options and explains the reasoning behind each one.
+
+## Input
+
+- Neera's draft
+- The flagged issues list from Stage 6
+
+## What Claude Does at This Stage
+
+1. Work through the flagged issues list from Stage 6 
+   in order
+2. For each flagged issue, produce a suggested rewrite
+3. Run every suggestion through the voice check below 
+   before showing it
+4. Show each suggestion in the accept/edit/reject format
+5. Explain in one sentence why the suggestion is better 
+   than the original
+6. Never apply a suggestion directly to the draft
+7. Never suggest more than one option per flag unless 
+   Neera asks for alternatives
+
+## Voice Check
+
+Before showing any suggestion, run it against 
+these five questions from voice.md:
+
+1. Could this have been written by anyone else? 
+   If yes, rewrite it before showing it.
+2. Does it sound like something Neera would say out loud? 
+   If no, rewrite it before showing it.
+3. Does it use any word from the filler word watch list? 
+   If yes, remove it before showing it.
+4. Does it lead with credentials instead of observations? 
+   If yes, flip it before showing it.
+5. Does it over-explain something the reader can 
+   figure out themselves? If yes, cut it before showing it.
+
+If a suggestion fails any of these checks, fix it 
+before showing it to Neera. If it cannot be fixed 
+without losing the meaning, flag that the issue 
+may need Neera's own words to resolve.
+
+## Suggestion Format
+
+Show every suggestion in this format:
+
+---
+**FLAG:** [quote the flagged phrase or sentence]
+**ISSUE:** [one sentence describing the problem]
+**SUGGESTION:** [the rewrite]
+**WHY:** [one sentence explaining what makes it better]
+
+Accept / Edit / Reject
+---
+
+## Handling Rejections
+
+If Neera rejects a suggestion:
+- Do not offer the same suggestion again in different words
+- Ask if she wants an alternative approach or wants 
+  to handle it herself
+- Move on to the next flag
+
+## Handling Edits
+
+If Neera edits a suggestion:
+- Accept the edit without pushback
+- Note the edit as a voice signal for future suggestions 
+  in the same session
+
+## Special Cases
+
+**When the issue needs Neera's own words:**
+Some flags cannot be fixed with a suggestion because the fix requires a real moment, specific detail, or lived experience that only Neera has. In these cases:
+
+Do not fabricate a suggestion.
+Instead flag it as:
+
+---
+**FLAG:** [quote]
+**ISSUE:** [problem description]
+**SUGGESTION:** This needs your words, not mine.
+**WHAT'S MISSING:** [describe specifically what real moment, detail, or experience would fill this gap]
+
+Accept / Edit / Reject
+---
+
+**When two flags have the same fix:**
+If fixing one flagged issue automatically resolves 
+another, note both flags and show one suggestion 
+that addresses both.
+
+**When a flag is a structural issue in disguise:**
+If a language flag turns out to be a symptom of a structural problem that should have been caught in Stage 5, flag it as a structural issue and recommend returning to Stage 5 before continuing with Stage 7.
+
+## Suggestion Limits
+
+Do not suggest:
+- Wholesale rewrites of paragraphs Neera has not flagged
+- Changes to intentional stylistic choices identified in voice.md (short fragments, standalone sentences, conversational asides)
+- Additions of content that wasn't in the original draft
+- Changes to section order or structure (that is Stage 4 territory)
+
+## Output
+
+A complete suggestion pass through all flagged issues from Stage 6 in accept/edit/reject format.
+
+When all flags have been addressed, confirm: "All Stage 6 flags have been reviewed. Draft is ready for Stage 8 relevance check when Neera confirms the suggestions are resolved."

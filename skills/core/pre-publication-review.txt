@@ -1,0 +1,153 @@
+# pre-publication-review.txt
+
+Post-Stage 9 final check before publishing.
+Always load voice.txt before running this process.
+
+## Purpose
+
+To evaluate a near-final draft section by section for flow, pacing, repetition, and reader value before publishing. This is NOT a formal stage in the workflow -- it's a final safety check after all stages (3-9) are complete.
+
+This process combines elements of:
+- Line editing (flagging repetition, flow issues)
+- Suggestion (showing before/after options)
+- Relevance (checking value-add)
+
+## When to Use This
+
+Use this process when:
+- All workflow stages (3-9) are complete
+- Neera has a draft she considers "final"
+- She wants a section-by-section evaluation before publishing
+- She's concerned about pace, repetition, or reader value
+
+Do NOT use this as a substitute for Stages 6-7 (line edit + suggestion). Those should be completed first.
+
+## Input
+
+Neera's near-final draft, which she's ready to publish pending this final check.
+
+## What Claude Does in This Process
+
+1. **Go section by section** (not all at once)
+2. **For each section, flag:**
+   - Flow issues (abrupt transitions, unclear connections)
+   - Repetition (word/phrase/idea repetition within and across sections)
+   - Pacing issues (sections that drag, feel rushed, or break momentum)
+   - Voice breaks (corporate speak, generic advice, elevated language)
+
+3. **Show suggestions in Before/After format**
+   - Quote the original
+   - Show the suggested revision
+   - Explain why it's better
+   - Always use Accept/Edit/Reject format
+
+4. **Track cumulative repetition**
+   - Keep a running log of repeated words/phrases across sections
+   - Flag when repetition becomes heavy (excluding core terms like "product marketing")
+   - Note concentration (e.g., "AI appears 5 times in this section alone")
+
+5. **Check pacing after each section**
+   - Is momentum maintained?
+   - Does the section feel too long relative to others?
+   - Are there redundant points slowing it down?
+
+6. **Wait for Neera's response before moving to next section**
+   - She may accept, edit, or reject suggestions
+   - She may push back on flags -- accept her corrections
+   - Do NOT move to the next section until she's ready
+
+7. **At the end, run a final relevance check:**
+   - Does the post make the reader feel seen?
+   - Is the core insight new or differentiated?
+   - Can they do something actionable today?
+   - Would they share it?
+   - Does it go beyond what other creators have said?
+
+## Repetition Tracking Format
+
+After each section, maintain a cumulative log:
+
+**REPETITION LOG** (cumulative across sections X-Y):
+- **"keyword"** - X times total (note if getting heavy)
+- **"phrase"** - X times (flag concentration in specific section if relevant)
+- **Core terms excluded**: product marketing, product marketers, PMMs, etc.
+
+When a keyword hits critical mass (10+ instances), flag it explicitly and suggest where instances could be cut if it's not essential to meaning.
+
+## Suggestion Format
+
+Use the same format as suggestion.txt:
+
+---
+**FLAG:** [quote the issue]
+**ISSUE:** [one sentence describing the problem]
+**BEFORE**: [original text]
+**AFTER**: [suggested revision]
+**WHY**: [one sentence explaining what makes it better]
+
+Accept / Edit / Reject
+---
+
+## Final Relevance Check Format
+
+After all sections are reviewed, answer these four questions from the target reader's perspective (B2B SaaS founder or business leader):
+
+**Question 1: Does it make me feel seen?**
+- Is there a moment where the reader thinks "this is exactly my situation"?
+- Quote the specific line/paragraph that creates that moment
+- Flag if it doesn't exist or comes too late
+
+**Question 2: Is the core insight new to me?**
+- Has the reader heard this before from other PMM creators?
+- Is the framing genuinely fresh or a repackaged version of existing advice?
+- Identify what makes it feel fresh (or what's missing if it feels familiar)
+
+**Question 3: Can I do something with this today?**
+- What's the one most actionable thing in the post?
+- Is it specific enough to use or still abstract?
+- Would the reader know what success looks like when they've done it?
+
+**Question 4: Would I share this?**
+- Quote the most quotable/shareable line or insight
+- Does the post say something the reader would want to be seen sharing?
+- Flag if nothing feels shareable
+
+**OVERALL VERDICT:**
+Ready to publish / Needs one more pass / Return to earlier stage
+
+If "needs one more pass," specify exactly what needs to change.
+If "return to earlier stage," specify which stage and why.
+
+## What This Process Will NOT Fix
+
+This is not a substitute for:
+- Structural issues (that's Stage 5 editorial)
+- Weak hooks or missing thesis (that's Stage 5)
+- Unvalidated messaging or missing customer insight (that's Stages 3-4)
+- Grammar and punctuation errors (that's Stage 6)
+
+If major structural issues surface during this review, flag that the post should return to Stage 5 before publication.
+
+## Patterns to Watch For
+
+Based on Neera's editing patterns:
+
+1. **She self-diagnoses redundancy**: If she's already noted that sections feel repetitive, validate her instinct and suggest cuts
+
+2. **She catches weak hooks**: If the opening doesn't ground the reader in a real moment, she'll recognize it
+
+3. **She values concrete over abstract**: Watch for vague terms ("alignment," "strategic," "optimize") without specific meaning
+
+4. **She prefers directive language for her audience**: Revenue leaders don't "advocate for" their teams -- they "prioritize" or "direct"
+
+5. **She maintains frameworks consistently**: If she establishes "Activity vs. Signal," don't introduce "Resonance" as a third term
+
+6. **She knows when fourth-wall breaking works**: Trust her judgment on casual asides and double punctuation -- she's signaling "we're both in on this"
+
+## Output
+
+After all sections are reviewed:
+- Summary of all accepted changes
+- Final repetition count for heavy keywords
+- Relevance check verdict
+- Confirmation that post is ready to publish (or specific issues to address)

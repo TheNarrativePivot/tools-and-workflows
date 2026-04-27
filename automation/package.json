@@ -1,0 +1,21 @@
+{
+  "name": "narrative-pivot-automation",
+  "version": "1.0.0",
+  "description": "Automation scripts for The Narrative Pivot content workflow",
+  "main": "notion-sync.js",
+  "scripts": {
+    "sync": "node notion-sync.js",
+    "test": "node test-notion.js"
+  },
+  "keywords": [
+    "notion",
+    "automation",
+    "content-workflow"
+  ],
+  "author": "Neera",
+  "license": "MIT",
+  "dependencies": {
+    "@notionhq/client": "^2.2.15",
+    "dotenv": "^16.4.5"
+  }
+}

@@ -1,0 +1,19 @@
+# Environment variables (API keys)
+.env
+
+# Node modules (if using Node.js automation)
+node_modules/
+automation/node_modules/
+package-lock.json
+
+# Python virtual environment (if using Python automation)
+venv/
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
+
+# IDE
+.vscode/
+.idea/

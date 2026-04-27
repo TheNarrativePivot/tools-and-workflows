@@ -1,0 +1,174 @@
+# relevance.md
+
+Stage 8 of The Narrative Pivot workflow.
+Always load voice.md before running this skill.
+
+## Purpose
+
+To evaluate the near-final draft from the perspective of 
+the target reader -- not as an editor, but as the person 
+the post is written for. This stage asks: would a B2B SaaS 
+founder or business leader find this useful, original, 
+and worth sharing?
+
+This stage does NOT flag language issues or structural 
+problems. Those should be resolved before Stage 8.
+It produces an honest reader assessment.
+
+## Input
+
+Neera's near-final draft after Stages 5, 6, and 7 
+have been completed.
+
+## What Claude Does at This Stage
+
+Read the full draft as the target reader and answer 
+the four assessment questions below honestly.
+Do not soften feedback to be encouraging.
+Do not over-praise to be supportive.
+The most useful thing at this stage is an honest 
+assessment of whether the post actually lands.
+
+## The Target Reader Profile
+
+When reading the draft, inhabit this person:
+
+- A founder or business leader at a funded or mature 
+  B2B SaaS company
+- They have a product that works and a pipeline or 
+  marketing motion that isn't performing the way 
+  it should
+- They have probably tried to fix this before -- 
+  hired a copywriter, rewritten their homepage, 
+  A/B tested headlines -- and are still stuck
+- They are not a PMM and do not think of their 
+  problem as a "messaging and positioning problem"
+- They describe their problem as:
+  "our sales cycle is too long"
+  "we can't explain what we do simply"
+  "we're losing deals we should be winning"
+  "our marketing generates traffic but not pipeline"
+  "our team isn't aligned on what we do or who it's for"
+- They are skeptical of generic marketing advice
+- They will stop reading the moment something feels 
+  like it was written for a PMM audience
+
+## The Four Assessment Questions
+
+**Question 1: Does it make me feel seen?**
+Is there a moment in the first half of the post where 
+the target reader thinks "this is exactly my situation"?
+
+Assess:
+- Which specific line or paragraph creates that moment?
+- If no such moment exists, flag it
+- If the moment exists but comes too late, flag it
+
+**Question 2: Is the core insight new to me?**
+Has the target reader heard this before?
+Is the framing genuinely fresh or does it feel like 
+a repackaged version of advice they've already ignored?
+
+Assess:
+- Is the thesis an inversion or reframe that changes 
+  how they think about the problem?
+- Or does it confirm something they already knew 
+  without giving them a new way to act on it?
+- If the insight feels familiar, identify what would 
+  make it feel fresh
+
+**Question 3: Can I do something with this today?**
+Does the post give the target reader at least one 
+thing they can act on immediately -- something 
+specific enough to bring back to their team?
+
+Assess:
+- What is the one most actionable thing in the post?
+- Is it specific enough to use or is it still abstract?
+- Would the reader know what the output looks like 
+  when they've done it?
+- If nothing is immediately actionable, flag it
+
+**Question 4: Would I share this?**
+Would the target reader send this to a colleague, 
+post it in a Slack channel, or save it to come 
+back to?
+
+Assess:
+- Is there a line, paragraph, or idea that is 
+  genuinely quotable or shareable?
+- Does the post say something the reader would 
+  want to be seen sharing?
+- If nothing is shareable, identify what would 
+  make it so
+
+## The Familiarity Check
+
+After answering the four questions, run this check:
+
+Search for any idea, framework, or piece of advice 
+in the post that appears in the work of benchmark 
+creators from competitive-check.md.
+
+For each overlap found, assess:
+- Is Neera saying the same thing in a different way?
+- Or is she using a familiar concept as a stepping 
+  stone to something genuinely new?
+
+The first is a problem. The second is fine.
+Flag the first. Leave the second alone.
+
+## Reader Assessment Format
+
+Produce the output in this format:
+
+---
+**OVERALL VERDICT:**
+Ready to publish / Needs one more pass / 
+Return to earlier stage
+(If returning to an earlier stage, specify which one 
+and why)
+
+**QUESTION 1 -- Does it make me feel seen?**
+Yes / Partially / No
+The moment that lands: [quote it]
+What's missing or too late: [if applicable]
+
+**QUESTION 2 -- Is the core insight new to me?**
+Yes / Partially / No
+What feels genuinely fresh: [describe it]
+What feels familiar: [describe it if applicable]
+
+**QUESTION 3 -- Can I do something with this today?**
+Yes / Partially / No
+The most actionable thing: [describe it]
+What's still too abstract: [if applicable]
+
+**QUESTION 4 -- Would I share this?**
+Yes / Partially / No
+The most shareable moment: [quote it]
+What's missing: [if applicable]
+
+**FAMILIARITY FLAGS:**
+[List any ideas that overlap with benchmark creators 
+and assess whether it's a problem or acceptable]
+
+**THE ONE THING THAT WOULD MAKE THIS STRONGER:**
+[One specific, concrete suggestion -- not a list. 
+The single highest-impact change at this stage.]
+---
+
+## Output
+
+A completed reader assessment with an overall verdict.
+
+If the verdict is ready to publish, confirm:
+"Stage 8 complete. Draft is ready for Stage 9 
+final pass."
+
+If the verdict is needs one more pass, identify 
+exactly what needs to change and which stage 
+should handle it.
+
+If the verdict is return to earlier stage, specify 
+the stage and the reason before anything else.
