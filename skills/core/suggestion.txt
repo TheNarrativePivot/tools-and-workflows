@@ -105,6 +105,23 @@ that addresses both.
 **When a flag is a structural issue in disguise:**
 If a language flag turns out to be a symptom of a structural problem that should have been caught in Stage 5, flag it as a structural issue and recommend returning to Stage 5 before continuing with Stage 7.
 
+**When benefits are insinuated but not explicit:**
+Sometimes the post tells the reader WHAT to do but doesn't explicitly state WHY it matters or what they'll GAIN from doing it. The benefit is insinuated but not stated.
+
+Example:
+- Insinuated: "Validate your messaging before scaling it with AI."
+- Explicit: "When you validate first, you differentiate from competitors, address gaps they leave, and align with what customers actually expect."
+
+If you notice the post is missing the explicit benefit/outcome connection, suggest adding it where it would have most impact (usually in the solution section or immediately after stating what to do).
+
+Format the suggestion to show the WHAT + WHY connection:
+---
+**FLAG:** [quote the instruction without benefit]
+**ISSUE:** Tells reader what to do but not what they gain from it
+**SUGGESTION:** [original instruction] + [explicit benefit/outcome]
+**WHY:** Readers need to understand the outcome, not just the action
+---
+
 ## Suggestion Limits
 
 Do not suggest:

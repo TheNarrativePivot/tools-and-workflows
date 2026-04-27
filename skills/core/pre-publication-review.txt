@@ -88,12 +88,31 @@ Use the same format as suggestion.txt:
 Accept / Edit / Reject
 ---
 
+## Additional Checks Before Final Relevance
+
+Before running the final relevance check, assess these two critical areas:
+
+**Check 1: Is the intro current or dated?**
+- Does the opening reflect the CURRENT state of the problem for the target reader?
+- Or does it frame the problem in a way that feels 6-12 months out of date?
+- Example: In early 2024, the problem was "teams being told to adopt AI." By mid-2025, the problem shifted to "teams adopted AI but are using it tactically while competitors use it strategically."
+- Flag if the intro frames the problem in a way that no longer matches where the target reader is today
+- Suggest adjustments that reflect current landscape without requiring a full rewrite
+
+**Check 2: Are benefits explicit or just insinuated?**
+- Does the post explicitly state what the reader GAINS from following the advice?
+- Or does it only state what to DO without connecting it to outcomes?
+- Example: "Validate your messaging before scaling it" (tells what to do) vs. "When you validate first, you differentiate from competitors, address gaps they leave, and align with what customers actually expect" (states the benefit)
+- Flag if benefits are insinuated but not explicit
+- Suggest where to add the "why this matters" connection
+
 ## Final Relevance Check Format
 
 After all sections are reviewed, answer these four questions from the target reader's perspective (B2B SaaS founder or business leader):
 
 **Question 1: Does it make me feel seen?**
 - Is there a moment where the reader thinks "this is exactly my situation"?
+- Does the problem setup reflect their CURRENT reality (not an outdated version)?
 - Quote the specific line/paragraph that creates that moment
 - Flag if it doesn't exist or comes too late
 
@@ -144,10 +163,37 @@ Based on Neera's editing patterns:
 
 6. **She knows when fourth-wall breaking works**: Trust her judgment on casual asides and double punctuation -- she's signaling "we're both in on this"
 
+## Subtitle Workshopping
+
+If Neera asks to workshop the subtitle, follow this process:
+
+**Purpose of subtitle for her audience (B2B SaaS founders, revenue leaders):**
+- Clarifies what the post is about beyond the title
+- Speaks directly to their pain or desired outcome
+- Punchy and direct (not explanatory or academic)
+- Can stand alone as a hook
+
+**What revenue leaders need:**
+- Short and declarative (not wordy)
+- Outcome-focused (deals, pipeline, revenue - not process details)
+- Challenges assumptions or names the real problem
+- No hedging ("starting to see," "may need to," etc.)
+
+**Format:**
+- Present 5-7 options in different directions (problem-focused, outcome-focused, question-based, contrast-based)
+- If she says "punchier," cut 30-50% of words and make it more declarative
+- Keep iterating until it hits the right punch for her target reader
+
+**Example progression:**
+- First attempt: "For revenue-focused leaders who are starting to see that creating faster won't help if you're scaling the wrong message."
+- Punchier: "Creating faster doesn't matter if you're scaling the wrong message."
+- Punchiest: "You can't scale your way out of bad messaging."
+
 ## Output
 
 After all sections are reviewed:
 - Summary of all accepted changes
 - Final repetition count for heavy keywords
 - Relevance check verdict
+- If subtitle needs workshopping, present punchy options tailored to target audience
 - Confirmation that post is ready to publish (or specific issues to address)

@@ -40,15 +40,23 @@ If external feedback accompanies the draft:
 ## The Six Structural Checks
 
 **Check 1: Target audience clarity**
-Is it clear within the first two paragraphs who this post 
-is for? Would a B2B SaaS founder or business leader 
+Is it clear within the first two paragraphs who this post
+is for? Would a B2B SaaS founder or business leader
 self-identify before the end of the hook?
 
 Flag if:
-- The hook takes more than two paragraphs to signal 
+- The hook takes more than two paragraphs to signal
   the target reader
-- The post could be mistaken for content written for PMMs 
+- The post could be mistaken for content written for PMMs
   rather than founders or business leaders
+- The problem setup reflects an outdated version of the
+  reader's reality (e.g., framing AI as an emerging technology
+  when the reader has already adopted it, or focusing on
+  "adoption pressure" when the real issue is "effective usage")
+
+When the target reader's landscape shifts (early adoption →
+strategic usage, for example), the intro must shift with it
+or it will feel dated even if published weeks later.
 
 **Check 2: Thesis clarity and consistency**
 Is the core thesis stated explicitly somewhere in the post?
