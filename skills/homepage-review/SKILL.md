@@ -42,9 +42,9 @@ Run through these evaluations in order:
 #### A. Hero Section Evaluation (Weak/Moderate/Strong)
 
 **Who It's For:**
-- **Strong**: Names specific type of team ("data team," "go-to-market teams," "technical teams") or uses natural language that target buyers immediately recognize themselves in
-- **Moderate**: Mentions teams but with some qualifier ("analytical teams," "revenue teams")
-- **Weak**: Generic ("your team," "your whole team," "businesses," "anyone")
+- **Strong**: Names specific type of team ("data team," "go-to-market teams," "technical teams") or uses natural language that target buyers immediately recognize themselves in. **Note:** Headlines don't always need explicit job titles if the full hero section (headline + subheadline) makes the audience clear and easily inferable.
+- **Moderate**: Mentions teams but with some qualifier ("analytical teams," "revenue teams"), or uses a semi-specific term (like "builders") that requires the subheadline to clarify but flows better than forcing explicit job titles
+- **Weak**: Generic ("your team," "your whole team," "businesses," "anyone") even after reading the full hero section
 
 **What It Is:**
 - **Strong**: Clear product category + function, not generic ("AI analytics platform" alone is weak)
@@ -210,6 +210,8 @@ Grade each component that's present as Weak/Moderate/Strong based on DEPTH and C
 ```markdown
 # Homepage Review: [Company Name]
 
+**What this is:** [One-line description of what the product/service actually does before analyzing how well they communicate it]
+
 ## Overall Assessment
 **Hero Section:** [Weak/Moderate/Strong]
 **Full Page:** [Weak/Moderate/Strong]
@@ -219,13 +221,13 @@ Grade each component that's present as Weak/Moderate/Strong based on DEPTH and C
 
 ## Positioning Table
 
-| Element | Hero | Full Page | Strength | Notes |
-|---------|------|-----------|----------|-------|
-| **Who it's for** | [Present/Absent] | [Specific/Generic/Implied] | [Weak/Moderate/Strong] | [What you found or what's missing] |
-| **What it is** | [Present/Absent] | [Clear/Generic/Confusing] | [Weak/Moderate/Strong] | [Product category clarity] |
-| **"So What?" moment** | [Present/Absent] | [Present/Absent/Weak] | [Weak/Moderate/Strong] | [Where it appears, if at all] |
-| **Pain-point features** | N/A | [Present/Generic/Absent] | [Weak/Moderate/Strong] | [Do features address pain or just list capabilities?] |
-| **Interactive demo/video** | [Present/Absent] | [Present/Absent] | [Weak/Moderate/Strong] | [Can buyers see themselves using it?] |
+| Element | Answer | Hero | Full Page | Strength | Notes |
+|---------|--------|------|-----------|----------|-------|
+| **Who it's for** | [The actual target audience/persona] | [Present/Absent] | [Specific/Generic/Implied] | [Weak/Moderate/Strong] | [Additional context] |
+| **What it is** | [The actual product category/function] | [Present/Absent] | [Clear/Generic/Confusing] | [Weak/Moderate/Strong] | [Additional context] |
+| **"So What?" moment** | [What differentiated value they claim] | [Present/Absent] | [Present/Absent/Weak] | [Weak/Moderate/Strong] | [Where it appears, depth] |
+| **Pain-point features** | [How features connect to pain] | N/A | [Present/Generic/Absent] | [Weak/Moderate/Strong] | [Additional context] |
+| **Interactive demo/video** | [What visual proof exists] | [Present/Absent] | [Present/Absent] | [Weak/Moderate/Strong] | [Type and quality] |
 
 ---
 
@@ -335,6 +337,7 @@ Grade each component that's present as Weak/Moderate/Strong based on DEPTH and C
 - Depth > breadth (one component done well beats five done poorly)
 - Copy is king (visuals help but can't rescue weak copy)
 - Specificity without jargon is the goal
+- **Headline specificity:** Headlines don't need explicit job titles if the target audience is easily understood/inferred from the full hero section (headline + subheadline). Copywriting flow and clarity matter—"builders" with clear context beats awkward "engineering builders"
 
 **Forgiveness Rules:**
 - No "So What?" but highly specific everywhere else = still Good tier (can add later)
