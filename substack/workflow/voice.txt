@@ -70,3 +70,29 @@ If Neera says a flagged element IS part of her voice:
 - The author has final authority on what matches their voice
 
 Example: If she says double punctuation or casual asides are intentional fourth-wall breaking, that overrides the "conversational but not casual" guideline.
+
+## Stage 4 Output: Google Doc Creation
+
+When delivering a first draft (Stage 4), automatically create a Google Doc in Neera's Substack folder in Google Drive. Do not output the draft in the terminal. Create the Google Doc and share the link instead.
+
+**Title format:** `[Post Type] // [Post Title]`
+
+Post type options: `Messaging`, `Positioning`, `Sales Enablement`, `Customer Research`
+
+If the post type is unclear from context, ask before creating the doc.
+
+**Format the content as HTML** so Google Docs renders it with proper heading styles:
+- Post title → `<h1>`
+- Section headers → `<h2>`
+- Sub-section headers → `<h3>`
+- Body paragraphs → `<p>`
+- Bold text → `<strong>`
+
+**Steps:**
+1. Convert the full draft to HTML with the structure above
+2. Call `mcp__claude_ai_Google_Drive__create_file` with:
+   - `title`: `[Post Type] // [Post Title]`
+   - `textContent`: the HTML-formatted draft
+   - `contentMimeType`: `text/html`
+   - `parentId`: `13OQhCmb1p9XxWTOAwqgrA3MBT4woHQx-` (Substack folder)
+3. Return the Google Doc link to Neera

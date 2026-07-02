@@ -9,25 +9,24 @@ The Narrative Pivot is a Substack newsletter by Neera targeting B2B SaaS founder
 
 ## Directory Structure
 ```
-skills/
-├── core/                  # Active workflow stages (Stages 3-9)
+substack/
+├── workflow/              # Active workflow stages (Stages 3-9)
 │   ├── voice.txt           # Voice rules -- load at every stage
 │   ├── outline.txt         # Stage 3
 │   ├── editorial.txt       # Stage 5 & 9
 │   ├── line-edit.txt       # Stage 6
 │   ├── suggestion.txt      # Stage 7
-│   └── relevance.txt       # Stage 8
-├── research/              # Pre-Claude research workflows
+│   ├── relevance.txt       # Stage 8
+│   └── pre-publication-review.txt  # Final review
+├── research/              # Research workflows
 │   ├── research-messaging.md          # Messaging consistency
 │   ├── research-positioning.md        # Positioning in AI era
 │   └── research-sales-enablement.md   # Sales enablement
-├── docs/                  # Documentation
-│   ├── notion-database-schema.md      # Notion setup guide
-│   └── api-setup-guide.md             # API access instructions
-└── archive/               # Deprecated workflows
-    ├── ideation.md                    # Replaced by research workflows
-    ├── competitive-check.md           # Replaced by Gemini analysis
-    └── content-generator.md           # Replaced by research workflows
+├── posts/                 # Published and draft posts
+│   ├── Issue 3/
+│   └── CLAUDE.md           # Post-specific instructions
+└── reference/             # Reference materials
+    └── ICP-Reference-NarrativePivot.docx
 ```
 
 ## Workflow Stages
@@ -36,9 +35,9 @@ skills/
 
 **Run weekly** to refresh your idea pipeline. Choose one research workflow based on your current focus:
 
-- **skills/research/research-messaging.md**: Messaging consistency across the brand
-- **skills/research/research-positioning.md**: Positioning in the AI era
-- **skills/research/research-sales-enablement.md**: Sales enablement
+- **substack/research/research-messaging.md**: Messaging consistency across the brand
+- **substack/research/research-positioning.md**: Positioning in the AI era
+- **substack/research/research-sales-enablement.md**: Sales enablement
 
 Each research workflow follows: **Perplexity** (research) → **Gemini** (analysis & clustering) → **Notion** (storage & selection)
 
@@ -54,45 +53,45 @@ Every post follows these stages in order. Do not skip stages.
 
 **Stage 3: Outline**
 Input: Selected idea from Notion + your brain dump/lived experience
-Skill: skills/core/outline.txt
+Skill: substack/workflow/outline.txt
 Output: section-by-section outline with gaps explicitly flagged
 
 **Stage 4: First Draft**
 Input: completed outline from Stage 3
-Skill: skills/core/voice.txt
+Skill: substack/workflow/voice.txt
 Output: full first draft written in Neera's voice, which she then edits to refine voice and style
 After Stage 4: Neera runs the edited draft through external sources (e.g., Gemini) and brings those findings back with the draft before Stage 5.
 
 **Stage 5: Editorial Pass**
 Input: Neera's voice-edited draft from Stage 4, plus any external feedback gathered after Stage 4
-Skill: skills/core/editorial.txt
+Skill: substack/workflow/editorial.txt
 Output: structural and grammatical feedback only -- no rewrites, no line edits
 
 **Stage 6: Line Edit**
 Input: revised draft after Stage 5
-Skill: skills/core/line-edit.txt
+Skill: substack/workflow/line-edit.txt
 Output: flagged language issues across the full post (are we using the right tense accurately?)
 
 **Stage 7: Suggestion Pass**
 Input: flagged sections from Stage 6
-Skill: skills/core/suggestion.txt
+Skill: substack/workflow/suggestion.txt
 Output: suggested rewrites shown as options to accept, edit, or reject
 
 **Stage 8: Relevance Check**
 Input: near-final draft
-Skill: skills/core/relevance.txt
+Skill: substack/workflow/relevance.txt
 Output: honest assessment from the target reader's perspective
 
 **Stage 9: Final Pass**
 Input: final draft
-Skill: skills/core/editorial.txt
+Skill: substack/workflow/editorial.txt
 Output: last check on thesis clarity, hook payoff, and ending resolution
 
 ## Global Rules
 
 These apply at every stage regardless of which skill is active:
 
-- Always load skills/core/voice.txt before doing any work
+- Always load substack/workflow/voice.txt before doing any work
 - Never rewrite Neera's content without being asked (except at Stage 4 where Claude creates the first draft)
 - When suggesting rewrites, always show them as options to accept, edit, or reject -- never apply them directly
 - Flag issues clearly with the specific location in the draft
