@@ -50,11 +50,18 @@ No copy rewrite is generated — that step is left to you.
 ## Output Format
 
 - Overall grade + one-line summary
-- "Applying the Framework" table (the 3 questions, answered)
-- SWOT analysis of the current copy (Strengths, Weaknesses, Opportunities, Threats)
+- "Applying the Framework" table (the 3 questions, answered in 50 words or fewer each,
+  roughly equal in length)
+- SWOT analysis of the current copy — one representative highlight per category
+  (Strengths, Weaknesses, Opportunities, Threats), each ~40 words, roughly equal length
 - 3 things to bring back to your marketing team
 
 ## Version History
+
+**v2.2.0** — Tightened length discipline to match the web app: framework table answers
+capped at 50 words each (roughly equal length), and each SWOT category reduced from a
+list to a single representative highlight (~40 words, roughly equal length across all
+four). Matches the web app's fixed-size table rows and 4-square SWOT layout.
 
 **v2.1.0** — Replaced "What Works / What Can Be Better" with a full SWOT analysis, added
 the "3 things to bring back to your marketing team" action section, removed the copy

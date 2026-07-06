@@ -1,7 +1,7 @@
 ---
 name: homepage-review
 description: Grade a B2B homepage using The Narrative Pivot's 3-question audit framework (what is it, who's it for, why should they care). Use when the user asks to review a homepage, analyze website messaging, evaluate positioning on a website, or critique B2B homepage copy. Use this whenever someone mentions homepage reviews, website analysis, or asks about homepage effectiveness.
-version: 2.1.0
+version: 2.2.0
 ---
 
 # Homepage Review Skill
@@ -127,27 +127,35 @@ intentionally left to the reader to do themselves.
 
 ## Applying the Framework
 
+Each answer is 50 words or fewer, and roughly equal in length to the other two — this
+renders as a 2-column, 3-row table, so an uneven answer breaks the layout.
+
 | Question | Answer |
 |---|---|
-| **What is it?** | [Literal category/type + positioning angle, sourced from the copy. If unanswered anywhere on the page, say so plainly.] |
-| **Who's it for?** | [Named buyer, and where on the page it appears — hero vs. buried vs. absent.] |
-| **Why should a customer care?** | [The transformation moment if present, or note its absence. Flag if features/outcomes are listed but never causally connected.] |
+| **What is the product or service?** | [Literal category/type + positioning angle, sourced from the copy, ≤50 words. If unanswered anywhere on the page, say so plainly.] |
+| **Who's it for?** | [Named buyer, and where on the page it appears — hero vs. buried vs. absent. ≤50 words.] |
+| **Why should a customer care?** | [The transformation moment if present, or note its absence. Flag if features/outcomes are listed but never causally connected. ≤50 words.] |
 
 ---
 
 ## SWOT: Current Copy
 
+Unlike a typical SWOT, each category gets exactly **one** representative highlight (a
+short quote + a ~40-word note) — not a list. Keep all four notes roughly the same
+length as each other; this renders as 4 equal-sized squares side by side, so uneven
+lengths break the layout.
+
 **Strengths**
-- "[verbatim quote]" — [why this works]
+- "[short verbatim quote]" — [why this works, ~40 words]
 
 **Weaknesses**
-- "[verbatim quote, or explicit note that this is absent]" — [buyer-impact framing of the gap — never dismissive]
+- "[verbatim quote, or explicit note that this is absent]" — [buyer-impact framing of the gap, ~40 words — never dismissive]
 
 **Opportunities**
-- [an underleveraged angle already present in the copy that could be strengthened, e.g. a strong stat that's buried and could be promoted higher]
+- [the single most valuable underleveraged angle already present in the copy, ~40 words, e.g. a strong stat that's buried and could be promoted higher]
 
 **Threats**
-- [an objective risk created by the current gaps, grounded in general buyer-behavior logic — never a fabricated claim about a specific named competitor]
+- [the single most important objective risk created by the current gaps, ~40 words, grounded in general buyer-behavior logic — never a fabricated claim about a specific named competitor]
 
 ---
 
