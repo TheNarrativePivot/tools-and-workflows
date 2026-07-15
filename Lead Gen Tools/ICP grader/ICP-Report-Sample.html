@@ -1,0 +1,501 @@
+<title>ICP Message Clarity Report — miovision.com</title>
+<style>
+  :root {
+    --paper: #F5F4F0;
+    --card: #FBFAF7;
+    --ink: #1A1B1A;
+    --muted: #6C6E68;
+    --hair: #DBD9D1;
+    --hair-strong: #C9C6BC;
+    --accent: #22406B;
+    --accent-soft: #E7ECF4;
+    --seal-track: #E3E1D8;
+    --pass: #2E7256;
+    --partial: #9C6B1E;
+    --fail: #B23A2E;
+    --band: #1B2A45;
+    --band-ink: #EDEBE4;
+    --band-muted: #A7B0C2;
+    --serif: Georgia, "Times New Roman", "Iowan Old Style", serif;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --measure: 66ch;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #14161A;
+      --card: #191C22;
+      --ink: #E7E6E1;
+      --muted: #9A9C97;
+      --hair: #2A2E36;
+      --hair-strong: #363B44;
+      --accent: #7BA4DC;
+      --accent-soft: #1E2A3D;
+      --seal-track: #2A2E36;
+      --pass: #6FBF95;
+      --partial: #D8AC5E;
+      --fail: #E08175;
+      --band: #10141C;
+      --band-ink: #E7E6E1;
+      --band-muted: #8791A3;
+    }
+  }
+  :root[data-theme="light"] {
+    --paper: #F5F4F0; --card: #FBFAF7; --ink: #1A1B1A; --muted: #6C6E68;
+    --hair: #DBD9D1; --hair-strong: #C9C6BC; --accent: #22406B; --accent-soft: #E7ECF4;
+    --seal-track: #E3E1D8; --pass: #2E7256; --partial: #9C6B1E; --fail: #B23A2E;
+    --band: #1B2A45; --band-ink: #EDEBE4; --band-muted: #A7B0C2;
+  }
+  :root[data-theme="dark"] {
+    --paper: #14161A; --card: #191C22; --ink: #E7E6E1; --muted: #9A9C97;
+    --hair: #2A2E36; --hair-strong: #363B44; --accent: #7BA4DC; --accent-soft: #1E2A3D;
+    --seal-track: #2A2E36; --pass: #6FBF95; --partial: #D8AC5E; --fail: #E08175;
+    --band: #10141C; --band-ink: #E7E6E1; --band-muted: #8791A3;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .sheet {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 20px 64px;
+  }
+  p { max-width: var(--measure); }
+
+  /* ---------- Masthead ---------- */
+  .masthead {
+    background: var(--band);
+    color: var(--band-ink);
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 30px 40px 34px;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 11px;
+    font-family: var(--serif);
+    font-size: 15px; letter-spacing: .02em;
+  }
+  .brand-mark {
+    width: 22px; height: 22px; border-radius: 5px;
+    background: var(--band-ink); color: var(--band);
+    display: grid; place-items: center;
+    font-weight: 700; font-size: 13px; font-family: var(--sans);
+  }
+  .report-title {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(30px, 5.4vw, 44px);
+    line-height: 1.08;
+    text-wrap: balance;
+    margin: 26px 0 0;
+  }
+  .subject {
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px;
+    margin-top: 12px;
+    font-size: 17px;
+  }
+  .subject .dot { color: var(--band-muted); }
+  .subject a { color: var(--band-ink); text-decoration: none; border-bottom: 1px solid var(--band-muted); }
+  .meta {
+    margin-top: 18px;
+    display: flex; flex-wrap: wrap; gap: 8px 16px;
+    font-size: 12.5px; letter-spacing: .03em; text-transform: uppercase;
+    color: var(--band-muted);
+  }
+
+  /* ---------- Section scaffold ---------- */
+  .section { padding-top: 40px; }
+  .section + .section { border-top: 1px solid var(--hair); margin-top: 40px; }
+  .eyebrow {
+    display: flex; align-items: baseline; gap: 12px;
+    font-size: 12px; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+  .eyebrow .num {
+    font-variant-numeric: tabular-nums;
+    color: var(--accent); font-weight: 700;
+  }
+  .eyebrow .rule { flex: 1; height: 1px; background: var(--hair); align-self: center; }
+  .h {
+    font-family: var(--serif); font-weight: 400;
+    font-size: clamp(22px, 3.6vw, 28px);
+    line-height: 1.15; margin: 0 0 14px; text-wrap: balance;
+  }
+  .lede { color: var(--muted); font-size: 15px; margin-top: 0; }
+
+  /* ---------- Snapshot ---------- */
+  .snap-group { margin: 22px 0 8px; }
+  .snap-group h3 {
+    font-family: var(--sans); font-size: 11.5px; letter-spacing: .13em;
+    text-transform: uppercase; color: var(--accent); margin: 0 0 14px; font-weight: 700;
+  }
+  .snap-row {
+    display: grid; grid-template-columns: 190px 1fr; gap: 8px 22px;
+    padding: 12px 0; border-top: 1px solid var(--hair);
+  }
+  .snap-row:first-of-type { border-top: 1px solid var(--hair-strong); }
+  .snap-row dt { font-weight: 600; font-size: 14.5px; }
+  .snap-row dd { margin: 0; color: var(--ink); }
+  .snap-row dd .q { color: var(--muted); }
+
+  /* ---------- Score ---------- */
+  .score-wrap {
+    display: grid; grid-template-columns: 220px 1fr; gap: 34px; align-items: center;
+    background: var(--card); border: 1px solid var(--hair-strong);
+    border-radius: 14px; padding: 28px 30px; margin-top: 6px;
+  }
+  .seal { position: relative; width: 200px; height: 200px; margin: 0 auto; }
+  .seal svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+  .seal .center {
+    position: absolute; inset: 0; display: grid; place-content: center; text-align: center;
+  }
+  .seal .val {
+    font-family: var(--serif); font-size: 60px; line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .seal .max { font-size: 14px; color: var(--muted); letter-spacing: .04em; margin-top: 4px; }
+  .seal .cap { font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-top: 9px; }
+
+  .bars { display: flex; flex-direction: column; gap: 13px; }
+  .bar-row { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; align-items: center; }
+  .bar-label { font-size: 14px; }
+  .bar-val { font-variant-numeric: tabular-nums; font-size: 13px; color: var(--muted); font-weight: 600; }
+  .bar-track { grid-column: 1 / -1; height: 8px; background: var(--seal-track); border-radius: 20px; overflow: hidden; }
+  .bar-fill { height: 100%; background: var(--accent); border-radius: 20px; }
+
+  .badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 12.5px; font-weight: 600; letter-spacing: .02em;
+    padding: 5px 12px 5px 10px; border-radius: 100px;
+    border: 1px solid var(--hair-strong); background: var(--card);
+  }
+  .badge .d { width: 9px; height: 9px; border-radius: 50%; }
+  .badge.high .d { background: var(--pass); }
+  .badge.med .d { background: var(--partial); }
+  .badge.low .d { background: var(--fail); }
+
+  .gap-note {
+    margin-top: 22px; padding: 16px 18px; border-left: 3px solid var(--accent);
+    background: var(--accent-soft); border-radius: 0 8px 8px 0;
+  }
+  .gap-note .k { font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+  .gap-note p { margin: 6px 0 0; max-width: none; }
+
+  /* ---------- Clarity test ---------- */
+  .checks { display: flex; flex-direction: column; gap: 0; margin-top: 6px; }
+  .check {
+    display: grid; grid-template-columns: 108px 1fr; gap: 6px 20px;
+    padding: 15px 0; border-top: 1px solid var(--hair);
+  }
+  .check:first-child { border-top: 1px solid var(--hair-strong); }
+  .verdict {
+    display: inline-flex; align-items: center; gap: 7px; align-self: start;
+    font-size: 11.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  }
+  .verdict .d { width: 8px; height: 8px; border-radius: 50%; }
+  .verdict.pass { color: var(--pass); } .verdict.pass .d { background: var(--pass); }
+  .verdict.partial { color: var(--partial); } .verdict.partial .d { background: var(--partial); }
+  .verdict.fail { color: var(--fail); } .verdict.fail .d { background: var(--fail); }
+  .check .body { }
+  .check .body b { font-weight: 650; }
+  .check .body p { margin: 3px 0 0; font-size: 14.5px; color: var(--muted); max-width: none; }
+
+  /* ---------- Observations + pull quotes ---------- */
+  .obs { display: flex; flex-direction: column; gap: 24px; margin-top: 8px; }
+  .obs-item { display: grid; grid-template-columns: 30px 1fr; gap: 16px; }
+  .obs-num { font-family: var(--serif); font-size: 22px; color: var(--accent); line-height: 1.1; }
+  .obs-item h4 { margin: 2px 0 8px; font-size: 16.5px; font-weight: 650; }
+  .obs-item p { margin: 0; font-size: 15px; }
+  .pull {
+    margin: 12px 0 0; padding: 12px 0 4px 18px; border-left: 3px solid var(--hair-strong);
+  }
+  .pull q { font-family: var(--serif); font-size: 18px; font-style: italic; quotes: "“" "”"; }
+  .pull .src { display: block; margin-top: 7px; font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+
+  /* ---------- Rewrite ---------- */
+  .rewrite { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 18px 0 4px; }
+  .rw {
+    border-radius: 12px; padding: 20px; border: 1px solid var(--hair-strong); background: var(--card);
+  }
+  .rw.after { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+  .rw .tag { font-size: 11px; letter-spacing: .11em; text-transform: uppercase; font-weight: 700; margin-bottom: 12px; }
+  .rw.before .tag { color: var(--muted); }
+  .rw.after .tag { color: var(--accent); }
+  .rw .head { font-family: var(--serif); font-size: 20px; line-height: 1.25; }
+  .rw.before .head { color: var(--muted); }
+  .rw .sub { font-size: 14.5px; color: var(--muted); margin-top: 8px; }
+  .rw.after .sub { color: var(--ink); }
+  .proof-note {
+    font-size: 13.5px; color: var(--muted); margin: 14px 0 0; padding: 12px 14px;
+    background: var(--accent-soft); border-radius: 8px; max-width: none;
+  }
+  .proof-note b { color: var(--accent); }
+  .fixes { margin: 22px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .fixes li { display: grid; grid-template-columns: 22px 1fr; gap: 12px; font-size: 15px; }
+  .fixes .n { color: var(--accent); font-weight: 700; font-variant-numeric: tabular-nums; }
+
+  /* ---------- Strategic insight ---------- */
+  .insight p { font-size: 17px; line-height: 1.62; }
+  .insight p .lead-in { font-family: var(--serif); }
+
+  /* ---------- CTA + footer ---------- */
+  .cta {
+    background: var(--band); color: var(--band-ink); border-radius: 16px;
+    padding: 32px 34px; margin-top: 48px;
+  }
+  .cta h3 { font-family: var(--serif); font-weight: 400; font-size: 24px; margin: 0 0 12px; }
+  .cta p { color: var(--band-muted); max-width: 60ch; margin: 0; }
+  .cta .btn {
+    display: inline-block; margin-top: 20px; background: var(--band-ink); color: var(--band);
+    text-decoration: none; font-weight: 650; font-size: 15px; padding: 12px 22px; border-radius: 8px;
+  }
+  .foot { margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--hair); }
+  .foot p { font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--ink); }
+  .foot a { color: var(--accent); font-family: var(--sans); font-style: normal; font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--hair-strong); }
+  .method {
+    margin-top: 24px; font-size: 12px; color: var(--muted); line-height: 1.5; max-width: none;
+  }
+
+  .toolbar {
+    position: sticky; top: 0; z-index: 5;
+    display: flex; justify-content: flex-end; gap: 10px;
+    max-width: 860px; margin: 0 auto; padding: 12px 20px 0;
+  }
+  .toolbar button {
+    font-family: var(--sans); font-size: 13px; font-weight: 600; cursor: pointer;
+    background: var(--card); color: var(--ink); border: 1px solid var(--hair-strong);
+    padding: 8px 16px; border-radius: 8px;
+  }
+  .toolbar button:hover { border-color: var(--accent); color: var(--accent); }
+  button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  @media (max-width: 680px) {
+    .score-wrap { grid-template-columns: 1fr; gap: 22px; }
+    .snap-row { grid-template-columns: 1fr; gap: 2px; }
+    .check { grid-template-columns: 1fr; gap: 6px; }
+    .rewrite { grid-template-columns: 1fr; }
+    .masthead { padding: 26px 22px 28px; }
+  }
+
+  @media print {
+    :root {
+      --paper: #fff; --card: #fff; --ink: #16171a; --muted: #55564f;
+      --hair: #d8d6cd; --hair-strong: #bdbab0; --accent: #22406B; --accent-soft: #eef1f7;
+      --seal-track: #e6e4db; --band: #1B2A45; --band-ink: #fff; --band-muted: #b9c1d2;
+    }
+    body { font-size: 11.5pt; }
+    .toolbar { display: none; }
+    .masthead, .cta { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section { break-inside: avoid-page; }
+    .score-wrap, .rw, .obs-item, .cta, .gap-note { break-inside: avoid; }
+    .sheet { padding-bottom: 0; }
+    @page { margin: 14mm; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="toolbar no-print">
+  <button onclick="window.print()">Download PDF</button>
+</div>
+
+<header class="masthead">
+  <div class="brand"><span class="brand-mark">N</span> The Narrative Pivot</div>
+  <h1 class="report-title">ICP Message Clarity Report</h1>
+  <div class="subject">
+    <a href="https://miovision.com">miovision.com</a>
+    <span class="dot">·</span>
+    <span class="badge high" style="background:transparent;border-color:var(--band-muted);color:var(--band-ink)"><span class="d"></span>High confidence</span>
+  </div>
+  <div class="meta">
+    <span>Analyzed 14 Jul 2026</span>
+    <span>Pages read: Homepage, Customer Stories</span>
+    <span>Site-only analysis</span>
+  </div>
+</header>
+
+<main class="sheet">
+
+  <!-- 01 SNAPSHOT -->
+  <section class="section">
+    <div class="eyebrow"><span class="num">01</span><span>Inferred ICP Snapshot</span><span class="rule"></span></div>
+    <p class="lede">We infer who your site is built for from public signals, starting with the job it does, not your industry or headcount.</p>
+
+    <div class="snap-group">
+      <h3>The job and category</h3>
+      <dl style="margin:0">
+        <div class="snap-row">
+          <dt>Job to be done</dt>
+          <dd>Operate, modernize, and continuously optimize traffic signal infrastructure across a jurisdiction's corridors. Every product and case study ladders up to this one job.</dd>
+        </div>
+        <div class="snap-row">
+          <dt>Category the buyer shops</dt>
+          <dd>Intelligent Transportation Systems. Your proof competes on named shelves: adaptive signal control, emergency vehicle preemption, traffic and safety studies, detection. <span class="q">Your umbrella term, "Intelligent Mobility," is broader than any shelf a buyer procures against.</span></dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="snap-group">
+      <h3>Firmographic segmentation, layered on the job</h3>
+      <dl style="margin:0">
+        <div class="snap-row"><dt>Primary buyer</dt><dd>Traffic engineering and operations leaders inside public agencies.</dd></div>
+        <div class="snap-row"><dt>Built-in market</dt><dd>Cities, DOTs, transit agencies, and the engineering consultants who run these workflows on their behalf.</dd></div>
+        <div class="snap-row"><dt>Segment / size</dt><dd>Large public jurisdictions. Twenty named, including Chicago, Detroit, SFMTA, and Texas DOT.</dd></div>
+        <div class="snap-row"><dt>Buying trigger</dt><dd>Modernization mandates, Vision Zero safety initiatives, and grant funding.</dd></div>
+        <div class="snap-row"><dt>Buying motion</dt><dd>Public-sector procurement. Demo, partner channel, procurement vehicles.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 02 SCORE -->
+  <section class="section">
+    <div class="eyebrow"><span class="num">02</span><span>Message Clarity Score</span><span class="rule"></span></div>
+    <div class="score-wrap">
+      <div class="seal">
+        <svg viewBox="0 0 120 120" aria-hidden="true">
+          <circle cx="60" cy="60" r="52" fill="none" stroke="var(--seal-track)" stroke-width="10"/>
+          <circle cx="60" cy="60" r="52" fill="none" stroke="var(--accent)" stroke-width="10"
+                  stroke-linecap="round" stroke-dasharray="326.726" stroke-dashoffset="55.54"/>
+        </svg>
+        <div class="center">
+          <div class="val">83</div>
+          <div class="max">/ 100</div>
+          <div class="cap">Clarity</div>
+        </div>
+      </div>
+      <div>
+        <div class="bars">
+          <div class="bar-row"><span class="bar-label">Role clarity</span><span class="bar-val">18 / 25</span><div class="bar-track"><div class="bar-fill" style="width:72%"></div></div></div>
+          <div class="bar-row"><span class="bar-label">Problem specificity</span><span class="bar-val">16 / 20</span><div class="bar-track"><div class="bar-fill" style="width:80%"></div></div></div>
+          <div class="bar-row"><span class="bar-label">Company fit clarity</span><span class="bar-val">18 / 20</span><div class="bar-track"><div class="bar-fill" style="width:90%"></div></div></div>
+          <div class="bar-row"><span class="bar-label">Proof-point consistency</span><span class="bar-val">18 / 20</span><div class="bar-track"><div class="bar-fill" style="width:90%"></div></div></div>
+          <div class="bar-row"><span class="bar-label">Offer-motion consistency</span><span class="bar-val">13 / 15</span><div class="bar-track"><div class="bar-fill" style="width:86.7%"></div></div></div>
+        </div>
+        <div style="margin-top:18px">
+          <span class="badge high"><span class="d"></span>High confidence</span>
+          <span style="font-size:13px;color:var(--muted);margin-left:10px">Roles, market, proof, and procurement motion are all explicitly present.</span>
+        </div>
+      </div>
+    </div>
+    <div class="gap-note">
+      <span class="k">Biggest gap</span>
+      <p>Your headline names a category broader than the one your buyers actually shop, so a specific, proven company reads generic at the top of the page.</p>
+    </div>
+  </section>
+
+  <!-- 03 ADDRESSED AUDIENCE -->
+  <section class="section">
+    <div class="eyebrow"><span class="num">03</span><span>The Audience Your Site Addresses</span><span class="rule"></span></div>
+    <h2 class="h">One market, and it does not hide it.</h2>
+    <p>The site speaks to public-sector transportation buyers throughout. It names its customers plainly, from Chicago and Detroit to SFMTA and Texas DOT, and it names its four buyers under "Who We Help." The pains are the ones agencies own: congestion, emergency response time, safety, emissions. The outcomes are concrete and counted, from "600+ Intersections modernized" to faster emergency response. One market runs the length of the page, with no second segment competing for attention.</p>
+  </section>
+
+  <!-- 04 CLARITY TEST -->
+  <section class="section">
+    <div class="eyebrow"><span class="num">04</span><span>The Clarity Test</span><span class="rule"></span></div>
+    <div class="checks">
+      <div class="check">
+        <span class="verdict pass"><span class="d"></span>Pass</span>
+        <div class="body"><b>Headline and subhead agree</b><p>No contradiction, but a note: the headline is redundant. It says less than the sharper subhead beneath it.</p></div>
+      </div>
+      <div class="check">
+        <span class="verdict pass"><span class="d"></span>Pass</span>
+        <div class="body"><b>Who is this for?</b><p>Four buyer roles named outright: traffic engineers and planners, agencies, first responders, transit.</p></div>
+      </div>
+      <div class="check">
+        <span class="verdict pass"><span class="d"></span>Pass</span>
+        <div class="body"><b>What job does it do?</b><p>Operate and optimize traffic signals across a jurisdiction. Unmistakable from the proof.</p></div>
+      </div>
+      <div class="check">
+        <span class="verdict partial"><span class="d"></span>Partial</span>
+        <div class="body"><b>What category is it in?</b><p>You lead with "Intelligent Mobility," an umbrella buyers do not procure against. They shop adaptive control, retiming, and preemption.</p></div>
+      </div>
+      <div class="check">
+        <span class="verdict pass"><span class="d"></span>Pass</span>
+        <div class="body"><b>Why should that buyer care?</b><p>Twenty named agencies and counted results carry the proof.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 OBSERVATIONS -->
+  <section class="section">
+    <div class="eyebrow"><span class="num">05</span><span>Top Observations</span><span class="rule"></span></div>
+    <div class="obs">
+      <div class="obs-item">
+        <div class="obs-num">1</div>
+        <div>
+          <h4>You lead with an umbrella, but you win on specific shelves.</h4>
+          <p>Your proof lives on named shelves buyers actively search: signal retiming, adaptive control, emergency preemption. The headline sits one level above all of them.</p>
+          <div class="pull"><q>Innovating Traffic Solutions for Smart Cities</q><span class="src">Homepage hero</span></div>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">2</div>
+        <div>
+          <h4>The headline is redundant to its own subhead.</h4>
+          <p>The specific, differentiated line already exists on the page. It just sits below a headline that says less.</p>
+          <div class="pull"><q>Streamline traffic flow across full corridors in minutes, not years.</q><span class="src">Homepage subhead</span></div>
+        </div>
+      </div>
+      <div class="obs-item">
+        <div class="obs-num">3</div>
+        <div>
+          <h4>"Stakeholders" hides the people.</h4>
+          <p>The site abstracts away the engineers, agencies, and first responders it names plainly further down the page.</p>
+          <div class="pull"><q>One platform for all Intelligent Mobility stakeholders</q><span class="src">Homepage</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 REWRITE + FIXES -->
+  <section class="section">
+    <div class="eyebrow"><span class="num">06</span><span>The Header Rewrite</span><span class="rule"></span></div>
+    <div class="rewrite">
+      <div class="rw before">
+        <div class="tag">Your header today</div>
+        <div class="head">Innovating Traffic Solutions for Smart Cities</div>
+        <div class="sub">Streamline traffic flow across full corridors in minutes, not years.</div>
+      </div>
+      <div class="rw after">
+        <div class="tag">One header for your highest-fit buyer</div>
+        <div class="head">For the city and DOT teams modernizing signal infrastructure.</div>
+        <div class="sub">Retime and optimize entire corridors in minutes, not years. Trusted by Chicago, Detroit, and SFMTA.</div>
+      </div>
+    </div>
+    <p class="proof-note"><b>Inferred from your proof.</b> Your case studies win on named jobs: Detroit's signal modernization, San Rafael's emergency response. This header names the buyer those wins already attract. It may not be your primary target. If it is not, that gap between who you sell to and who your proof draws is worth a conversation.</p>
+
+    <ul class="fixes">
+      <li><span class="n">1</span><span>Rewrite the hero around the job and the shelf. Name what the buyer operates and searches for, and keep the "minutes, not years" line that already works.</span></li>
+      <li><span class="n">2</span><span>Trade "Intelligent Mobility" for the categories buyers procure, at least above the fold. The umbrella can carry the platform story lower down.</span></li>
+      <li><span class="n">3</span><span>Pull proof into the hero. "Trusted by Chicago, Detroit, and SFMTA" earns more than any slogan.</span></li>
+    </ul>
+  </section>
+
+  <!-- 07 STRATEGIC INSIGHT -->
+  <section class="section insight">
+    <div class="eyebrow"><span class="num">07</span><span>Strategic Insight</span><span class="rule"></span></div>
+    <p><span class="lead-in">Miovision's real ICP is not "smart cities."</span> That is an aspiration, not a buyer. The real ICP is the team responsible for operating traffic signals across a jurisdiction, whether that team sits inside a city, a DOT, a transit agency, or a consulting firm hired to do it. That single job is what unifies an otherwise sprawling product line, and it is the thing the homepage headline refuses to say plainly. Name the job in the buyer's own words, put the company on the category shelf the buyer actually shops, and the specificity your proof already earned finally shows up where it matters most: the first sentence.</p>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta">
+    <h3>Here are the fixes for this quarter.</h3>
+    <p>You could hand this report to your marketing team. If nobody owns it by Friday, that is the actual finding. Let's talk.</p>
+    <a class="btn" href="{{BOOKING_URL}}">Book a call</a>
+  </div>
+
+  <div class="foot">
+    <p>Identifying the work is the easy part. Doing it is the hard part. I don't just tell you what to fix. I rewrite the copy myself. <a href="{{CONSULTANCY_URL}}">Work with me →</a></p>
+  </div>
+
+  <p class="method">Verbatim quotes are verified against the live site before this report is generated. The Message Clarity Score measures how clearly your site addresses a single buyer. It does not measure fit against your real customers, which no site-only analysis can see.</p>
+
+</main>
